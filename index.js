@@ -3,7 +3,7 @@
 //https://www.w3schools.com/js/js_functions.asp
 //
 
-console.log(`hello JS Class`);
+console.log(`*****************hello JS Class********************`);
 
 /*
 ECMAScript 2015, also known as ES6, introduced JavaScript Classes.
@@ -105,7 +105,7 @@ const myCar3 = new Car3("Ford", 2011);
 console.log("My car is " + myCar3.age(year) + " years old.");
 
 //JavaScript Functions
-console.log("start JavaScript Functions");
+console.log("*******************start JavaScript Functions******************");
 
 /*
 A JavaScript function is a block of code designed to perform a particular task.
@@ -228,3 +228,109 @@ Since local variables are only recognized inside their functions, variables with
 
 Local variables are created when a function starts, and deleted when the function is completed.
 */
+
+//JavaScript Objects
+console.log("***************now enJoy JavaScript Objects****************");
+
+/*
+Here is a car object example:
+Car Object 	    Properties 	            Methods
+	
+            car.name = Fiat           car.start()
+            car.model = 500           car.drive()
+            car.weight = 850kg        car.brake()
+            car.color = white 	      car.stop()
+*/
+
+/*
+Object Properties
+
+A real life car has properties like weight and color:
+car.name = Fiat, car.model = 500, car.weight = 850kg, car.color = white.
+Car objects have the same properties, but the values differ from car to car.
+*/
+
+/*
+Object Methods
+
+A real life car has methods like start and stop:
+car.start(), car.drive(), car.brake(), car.stop().
+Car objects have the same methods, but the methods are performed at different times.
+*/
+
+/*
+JavaScript Objects
+
+Objects are variables too. But objects can contain many values.
+This code assigns many values (Fiat, 500, white) to an object named car:
+*/
+const car = { type: "Fiat", model: "500", color: "white" };
+console.log(car);
+console.log(car.color);
+
+//It is a common practice to declare objects with the const keyword.
+
+/*
+JavaScript Object Definition
+How to Define a JavaScript Object
+
+    Using an Object Literal
+    Using the new Keyword
+    Using an Object Constructor
+*/
+/*
+JavaScript Object Literal
+
+An object literal is a list of name:value pairs inside curly braces {}.
+{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+*/
+
+// Create an Object:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
+console.log(person.firstName + " is " + person.age + " years old.");
+
+// Create an empty Object
+const person2 = {};
+
+// Add Properties
+person2.firstName = "Tohn";
+person2.lastName = "Doe";
+person2.age = 40;
+person2.eyeColor = "blue";
+console.log(person2.firstName + " is " + person2.age + " years old.");
+
+/*
+Using the new Keyword
+This example create a new JavaScript object using new Object(), and then adds 4 properties:
+*/
+// Create an Object
+const person3 = new Object();
+person3.firstName = "John";
+person3.lastName = "Doe";
+person3.age = 50;
+person3.eyeColor = "blue";
+console.log(person3);
+
+//there is no need to use new Object().
+// For readability, simplicity and execution speed, use the object literal method.
+
+//The named values, in JavaScript objects, are called propertie
+
+/*
+Objects written as name value pairs are similar to:
+
+    Associative arrays in PHP
+    Dictionaries in Python
+    Hash tables in C
+    Hash maps in Java
+    Hashes in Ruby and Perl
+*/
+console.log(person.lastName);
+console.log(person["lastName"]);
+
+//start from--JavaScript Object Methods
