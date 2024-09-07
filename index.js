@@ -334,3 +334,145 @@ console.log(person.lastName);
 console.log(person["lastName"]);
 
 //start from--JavaScript Object Methods
+/*
+Methods are actions that can be performed on objects.
+Methods are function definitions stored as property values
+*/
+
+const person4 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+
+console.log(person4.fullName());
+
+/*
+In JavaScript, Objects are King.
+If you Understand Objects, you Understand JavaScript.
+
+Objects are containers for Properties and Methods.
+Properties are named Values.
+Methods are Functions stored as Properties.
+Properties can be primitive values, functions, or even other objects.
+In JavaScript, almost "everything" is an object.
+
+    Objects are objects
+    Maths are objects
+    Functions are objects
+    Dates are objects
+    Arrays are objects
+    Maps are objects
+    Sets are objects
+
+All JavaScript values, except primitives, are objects.
+JavaScript Primitives
+
+A primitive value is a value that has no properties or methods.
+3.14 is a primitive value
+A primitive data type is data that has a primitive value.
+JavaScript defines 7 types of primitive data types:
+
+    string
+    number
+    boolean
+    null
+    undefined
+    symbol
+    bigint
+*/
+
+/*
+
+Immutable
+
+Primitive values are immutable (they are hardcoded and cannot be changed).
+
+if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.
+   Value	       Type	            Comment
+ "Hello"	      string	      "Hello" is always "Hello"
+  3.14	        number	      3.14 is always 3.14
+  true	        boolean	      true is always true
+  false	        boolean	      false is always false
+  null	        null(object)	null is always null
+  undefined   	undefined	    undefined is always undefined
+*/
+
+/*
+JavaScript Objects are Mutable
+
+Objects are mutable: They are addressed by reference, not by value.
+
+If person is an object, the following statement will not create a copy of person:
+const x = person;
+The object x is not a copy of person. The object x is person.
+The object x and the object person share the same memory address.
+Any changes to x will also change person:
+*/
+
+// Create an Object
+const person5 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
+
+// Create a Copy
+const m = person5;
+
+// Change Age
+m.age = 10;
+console.log(person5.firstName + " is " + person5.age + " years old.");
+
+//JavaScript Object Properties
+console.log(`****************JavaScript Object Properties****************`);
+
+/*
+An Object is an Unordered Collection of Properties
+Properties are the most important part of JavaScript objects.
+Properties can be changed, added, deleted, and some are read only.
+*/
+console.log(person5["firstName"] + " is " + person5["age"] + " years old.");
+
+let x2 = "firstName";
+let y2 = "age";
+console.log(person5[x2] + " is " + person5[y2] + " years old.");
+/*
+Adding New Properties
+You can add new properties to an existing object by simply giving it a value:
+*/
+person5.nationality = "English";
+console.log(person5.firstName + " is " + person5.nationality + ".");
+
+//Deleting Properties
+delete person5.age;
+console.log(person5.firstName + " is " + person5.age + " years old.");
+
+delete person5["firstName"];
+console.log(person5.firstName + " is " + person5.age + " years old.");
+
+//Nested Objects
+// Property values in an object can be other objects:
+
+const myObj = {
+  name: "John",
+  age: 30,
+  myCars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat",
+  },
+};
+console.log(myObj.myCars.car2);
+console.log(myObj.myCars["car2"]);
+console.log(myObj["myCars"]["car2"]);
+let p1 = "myCars";
+let p2 = "car2";
+console.log(myObj[p1][p2]);
+
+//start from JavaScript Object Methods
+//https://www.w3schools.com/js/js_object_method.asp
